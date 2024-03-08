@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "lakde"
+version = "1.0.0"
+description = "Locally adaptive kernel density estimators"
+authors = ["Kenny Olsen"]
+
+[tool.poetry.dependencies]
+python = ">=3.9.*"
+torch = ">=1.8.1"
+numpy = "1.23.*"
+tensorboard = ">=2.12.*"
+ninja = "1.11.* "
+
+[tool.poetry.group.data.dependencies]
+scikit-learn = "1.3.*"
+pandas = "2.1.*"
+h5py = "3.10.*"
+
+[tool.poetry.group.extra.dependencies]
+matplotlib = "3.8.*"
+seaborn = "0.12.*"
+SciencePlots = "2.1.*"
+ax-platform = "0.3.*"
+
+[tool.ruff]
+src = ["src"]
+line-length = 88
+indent-width = 4
+
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.ruff.lint]
+select = ["F", "I"]
+
+[tool.isort]
+profile = "black"
+skip_gitignore = true
+
+[tool.black]
+line-length = 88
